@@ -15,7 +15,6 @@ const io = socketio(server);
 app.use(cors());
 app.use(router);
 
-io.set('transports',['websocket']);
 
 io.on('connect', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
